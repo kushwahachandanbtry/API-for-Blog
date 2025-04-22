@@ -121,11 +121,11 @@ RESTful APIs make your backend easier to understand, maintain, and integrate wit
 ---
 
 ## 👤 Author
-- **Chandan Kushwaha**
+**Chandan Kushwaha**
 - **GitHub**: https://github.com/kushwahachandanbtry
 - **Email**: infokushwahachandan@gmail.com
 - **Whatsapp**: 9823196848
-Licensed under the **MIT License**
+- Licensed under the **MIT License**
 
 ---
 
