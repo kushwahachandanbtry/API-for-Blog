@@ -57,7 +57,13 @@ api-for-blog/ ├── server.js ├── routes/ ├── app.js├── mo
 ---
 
 ## 📌 Available Scripts
-In the project directory, you can run:
+
+Install dependencies
+
+```bash
+npm install
+
+Go to project directory, and run:
 
 ```bash
 npm start
