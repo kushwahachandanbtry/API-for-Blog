@@ -28,6 +28,10 @@ const blogSchema = new mongoose.Schema({
     userName:{
         type:String,
         required:true
+    },
+    createdAt:{
+        type:Date,
+        default:Date.now()
     }
 })
 

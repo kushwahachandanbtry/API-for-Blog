@@ -16,6 +16,10 @@ const commentSchema = new mongoose.Schema({
     blogId:{
         type:String,
         required:true
+    },
+    createdAt:{
+        type:Date,
+        default:Date.now()
     }
 })
 
