@@ -105,6 +105,24 @@ router.delete('/:id', (req, res) => {
 })
 
 
+//get all comment
+router.get('/', (req, res) => {
+    Comment.find()
+    .select("_id userId userName comment blogId")
+    .then(result => {
+        res.status(200).json({
+            comment:result
+        })
+    })
+    .then(err => {
+        console.log(err)
+        res.status(400).json({
+            error:err
+        })
+    })
+})
+
+
 //get all comment for particular blog
 router.get('/getAllComment/:blogId', (req, res) => {
     Comment.find({blogId:req.params.blogId})

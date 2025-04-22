@@ -42,7 +42,7 @@ router.post('/', checkAuth, async (req, res) => {
 
 
 //get all category
-router.get('/', checkAuth, (req, res) => {
+router.get('/ownCategory', checkAuth, (req, res) => {
     const token = req.headers.authorization.split(' ')[1]
     const verify = jwt.verify(token, 'chandan 123')
     category.find({userId: verify.userId})
@@ -59,6 +59,25 @@ router.get('/', checkAuth, (req, res) => {
         })
     })
 })
+
+
+//get all category
+router.get('/', (req, res) => {
+    category.find()
+    .select("_id userId title imageUrl")
+    .then(result => {
+        res.status(200).json({
+            categoryList:result
+        })
+    })
+    .catch(err =>{
+        console.log(err)
+        .res.status(400).json({
+            error:err
+        })
+    })
+})
+
 
 //delete category
 router.delete('/:id', (req, res) => {
